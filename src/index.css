@@ -1,0 +1,145 @@
+:root {
+  --color-bg: #050506;
+  --color-panel: rgba(10, 15, 25, 0.9);
+  --color-cyan: #00ffff;
+  --color-text: #9efcff;
+  --color-h1: #00e0ff;
+  --color-glow: rgba(0, 255, 255, 0.3);
+  --borde-neon: 0 0 8px var(--color-cyan), inset 0 0 12px rgba(0,255,255,0.2);
+  --fuente: 'Orbitron', sans-serif;
+  --color-alerta: #ff2a6d;
+  --color-exito: #05d9e8;
+  --color-neon-green: #00FF88;
+  --color-electric-blue: #00FFFF;
+  --color-pulsing-red: #FF0066;
+  --color-dark-blue: #05081A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--fuente);
+  color: var(--color-text);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animaciones globales */
+@keyframes scan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes particleAnim {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.98;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fingerprintScan {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes fingerprintPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px var(--color-neon-green));
+  }
+  100% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px var(--color-neon-green));
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
